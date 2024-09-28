@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eff84015-b74f-43fe-897c-9f814dd84cd5" name="Changes" comment="implementacao de particione para futuro metodo quickSort">
-      <change afterPath="$PROJECT_DIR$/quickSort.py" afterDir="false" />
+    <list default="true" id="eff84015-b74f-43fe-897c-9f814dd84cd5" name="Changes" comment="implementacao de quickSort">
+      <change afterPath="$PROJECT_DIR$/analiseAlgoritmos.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,11 +45,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.analiseAlgoritmos.executor": "Run",
     "Python.buildMaxHeap.executor": "Run",
     "Python.heapSort.executor": "Run",
     "Python.max_heapfy.executor": "Run",
     "Python.particione.executor": "Run",
     "Python.quickSort.executor": "Run",
+    "Python.teste.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master"
   }
@@ -110,13 +112,22 @@
       <option name="project" value="LOCAL" />
       <updated>1726162214150</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="implementacao de quickSort">
+      <option name="closed" value="true" />
+      <created>1726165650418</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1726165650418</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="a" />
     <MESSAGE value="implementacao heapSort" />
     <MESSAGE value="implementacao de particione para futuro metodo quickSort" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementacao de particione para futuro metodo quickSort" />
+    <MESSAGE value="implementacao de quickSort" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementacao de quickSort" />
   </component>
 </project>
