@@ -11,23 +11,18 @@ from selectionSort import selectionSort
 import matplotlib.pyplot as plt
 
 def generate_random_array(size):
-    """Gera um array de inteiros aleatórios de tamanho especificado."""
     return np.random.randint(0, 1000000, size)
 
 def measure_time(algorithm, arr):
-    """Mede o tempo de execução de um algoritmo."""
-    start_time = time.perf_counter()  # Marca o tempo de início
-    algorithm(arr.copy())  # Executa o algoritmo, usando uma cópia do array para evitar modificações
-    end_time = time.perf_counter()  # Marca o tempo de término
+    start_time = time.perf_counter()
+    algorithm(arr.copy())
+    end_time = time.perf_counter()
 
-    return end_time - start_time  # Retorna a diferença de tempo (tempo de execução)
+    return end_time - start_time
 
 def analise_execucao():
-    """Função para analisar e comparar o tempo de execução dos algoritmos."""
-    # Tamanhos dos arrays
     array_sizes = [10 ** i for i in range(1, 5)]  # De 10^1 a 10^6
 
-    # Dicionário para armazenar os tempos de execução
     execution_times = {
         "InsertionSort": [],
         "QuickSort": [],
@@ -36,19 +31,15 @@ def analise_execucao():
         "HeapSort": []
     }
 
-    # Medição de tempo para cada tamanho de array
     for size in array_sizes:
-        arr = generate_random_array(size)  # Gera um array aleatório para o tamanho atual
+        arr = generate_random_array(size)
 
-        # Medir tempo para InsertionSort
         time_insertion_sort = measure_time(insertionSort, arr)
         execution_times["InsertionSort"].append(time_insertion_sort)
 
-        # Medir tempo para QuickSort
         time_quick_sort = measure_time(quickSort, arr)
         execution_times["QuickSort"].append(time_quick_sort)
 
-        # Medir tempo para SelectionSort
         time_selection_sort = measure_time(selectionSort, arr)
         execution_times["SelectionSort"].append(time_selection_sort)
 
@@ -58,7 +49,6 @@ def analise_execucao():
         time_heap_sort = measure_time(heapSort, arr)
         execution_times["HeapSort"].append(time_heap_sort)
 
-    # Plotando os resultados
     x_values = array_sizes
 
     plt.figure(figsize=(10, 6))  # Define o tamanho da figura
@@ -68,17 +58,16 @@ def analise_execucao():
     plt.plot(x_values, execution_times["MergeSort"], label='MergeSort', marker = 'D')
     plt.plot(x_values, execution_times["HeapSort"], label='HeapSort', marker = '^')
 
-    # Configurações do gráfico
-    plt.xscale('log')  # Escala logarítmica no eixo X
-    plt.yscale('log')  # Escala logarítmica no eixo Y
+    plt.xscale('log')
+    plt.yscale('log')
     plt.xlabel('Tamanho do Array (log)')
     plt.ylabel('Tempo de Execução (s)')
     plt.title('Comparação de Algoritmos de Ordenação')
     plt.legend()
-    plt.grid(True)  # Adiciona uma grade ao gráfico
+    plt.grid(True)
 
-    # Mostrando o gráfico
+
     plt.show()
 
 if __name__ == "__main__":
-    analise_execucao()  # Executa a função de análise
+    analise_execucao()
