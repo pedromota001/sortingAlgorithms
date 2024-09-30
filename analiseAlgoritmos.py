@@ -51,7 +51,7 @@ def analise_execucao():
 
     x_values = array_sizes
 
-    plt.figure(figsize=(10, 6))  # Define o tamanho da figura
+    plt.figure(figsize=(10, 6))
     plt.plot(x_values, execution_times["InsertionSort"], label='InsertionSort', marker='o')
     plt.plot(x_values, execution_times["QuickSort"], label='QuickSort', marker='s')
     plt.plot(x_values, execution_times["SelectionSort"], label='SelectionSort', marker='x')
