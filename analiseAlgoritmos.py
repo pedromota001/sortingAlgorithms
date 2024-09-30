@@ -21,8 +21,7 @@ def measure_time(algorithm, arr):
     return end_time - start_time
 
 def analise_execucao():
-    array_sizes = [10 ** i for i in range(1, 5)]  # De 10^1 a 10^6
-
+    array_sizes = [10 ** i for i in range(1, 6)]
     execution_times = {
         "InsertionSort": [],
         "QuickSort": [],
